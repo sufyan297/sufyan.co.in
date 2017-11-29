@@ -1,0 +1,67 @@
+
+/* .container {
+  padding: 3rem 1.5rem;
+  text-align: center;
+} */
+.bg_main {
+    padding: 0;
+    height: 800px;
+    background-image: url('../img/background_header_final.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#particle {
+    height: 800px;
+    width: 100%;
+}
+h1 {
+    font-family: 'Muli';
+}
+.typed-text {
+    color: white;
+    font-family: 'Muli';
+    background: rgba(0,0,0,0.2);
+}
+.head_txt {
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    right: 50%; */
+    z-index: 5;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+.gray-bg {
+    background-color: #eee;
+}
+/* Overlay */
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+    width: 100%;
+}
+.item:hover .overlay {
+    opacity: 1;
+}
+.overlay-middle-text {
+  font-family: 'Muli', sans-serif;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 5;
+}
+.overlay-middle-text-pos {
+    position: relative;
+    top: 40%;
+}
