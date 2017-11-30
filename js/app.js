@@ -45,5 +45,21 @@
 				}
 			}
 		});
-    });
+
+		ChangeIt();
+		
+	});
+	
+	var totalCount = 3;	
+	function ChangeIt() 
+	{
+		var num = Math.ceil( Math.random() * totalCount );
+		document.getElementById('main_bg').style.backgroundImage = 'url(img/header_'+ num +'.jpg)';
+
+		// document.getElementById('main_bg').style.backgroundColor = 'red';
+		
+		document.getElementById('main_bg').style.backgroundRepeat = "no-repeat";// Background repeat
+
+		// console.log("Background changed.", num);
+	}
 })();
