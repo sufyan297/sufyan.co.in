@@ -49,7 +49,7 @@
 		ChangeIt();
 		
 	});
-	
+	var map_key = "AIzaSyBpknL41Ak54HpzPzaf6PsGZWeuAn1Oc4Q";
 	var totalCount = 3;	
 	function ChangeIt() 
 	{
