@@ -103,15 +103,23 @@ h1 {
 }
 
 /* Extra Small */
-@media (min-width: 340px) {
+@media (min-width: 340px) and (max-width: 543px) {
     .bg_main {
         height: 500px;
+    }
+    .head_txt {
+        padding: 15px;
     }
 }
 
 /* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  
-    
+@media (min-width: 544px) and (max-width: 767px) {  
+    .bg_main {
+        height: 500px;
+    }
+    .head_txt {
+        padding: 15px;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
