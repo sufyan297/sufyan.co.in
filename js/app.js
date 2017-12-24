@@ -62,4 +62,7 @@
 
 		// console.log("Background changed.", num);
 	}
+
+	$('.a-text').tooltip();
+
 })();
