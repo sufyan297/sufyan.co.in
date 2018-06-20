@@ -1,18 +1,6 @@
 <?php
 require 'vendor/autoload.php';
 
-//print_r($_POST);
-
-$client = new \GuzzleHttp\Client();
-//$res = $client->request('GET', 'https://api.github.com/repos/guzzle/guzzle');
-//echo $res->getStatusCode();
-// 200
-//echo $res->getHeaderLine('content-type');
-// 'application/json; charset=utf8'
-//echo $res->getBody();
-// '{"id": 1420053, "name": "guzzle", ...}'
-
-
 //variables
 $apikey = getenv("ELASTICEMAIL_API_KEY");
 $email = $_POST['email'];
@@ -36,7 +24,8 @@ $url = $endpoint."email/send?apikey=".$apikey."&bodyHtml=".$bodyHtml."&from=".$f
 // Send an asynchronous request.
 $request = new \GuzzleHttp\Psr7\Request('GET', $url);
 $promise = $client->sendAsync($request)->then(function ($response) {
-    echo 'I completed! ' . $response->getBody();
+    echo $response->getBody();
+    header('Location: https://sufyan.co.in/?mail_sent=1');
 });
 $promise->wait();
 ?>
