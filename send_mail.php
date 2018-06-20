@@ -1,6 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-
+$client = new \GuzzleHttp\Client();
 //variables
 $apikey = getenv("ELASTICEMAIL_API_KEY");
 $email = $_POST['email'];
