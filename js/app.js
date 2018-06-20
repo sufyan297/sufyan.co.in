@@ -17,6 +17,7 @@
 		console.log("Document Ready!");
 
 	    	var isMailSent = getParameterByName('mail_sent');
+	    console.log("MailSent - ", isMailSent);
 	        if (isMailSent == 1) {
 			alert("Your contact request has been submitted. Admin will contact you soon.");
 		}
