@@ -1,9 +1,25 @@
 (function() {
     console.log("App JS loaded.");
   
+	
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+	
     $(document).ready(function() {
 		console.log("Document Ready!");
 
+	    	var isMailSent = getParameterByName('mail_sent');
+	        if (isMailSent == 1) {
+			alert("Your contact request has been submitted. Admin will contact you soon.");
+		}
 		particlesJS.load('particle', 'js/particlejs-config.json', function() {
 			console.log('callback - particles.js config loaded');
 		});
