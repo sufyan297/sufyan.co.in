@@ -82,6 +82,6 @@
 
 	$('.a-text').tooltip();
 	var d = new Date();
-	var age = parseInt(getFullYear() - 1993) || 24;
+	var age = parseInt(d.getFullYear() - 1993) || 24;
 	$('#cal_age').html(age);
 })();
